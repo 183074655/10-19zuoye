@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		button{
+			border:0;
+			text-decoration: none;
+			outline-style: none;
+			width: 50px;
+			height: 20px;
+			color: #fff;
+			background-color: green;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<input type="text" placeholder="限6字">
+	<button>提交</button>
+	<script>
+		var input=document.getElementsByTagName("input")[0];
+		var button=document.getElementsByTagName("button")[0];
+		button.onclick=function(){
+			if(input.value.length>=6||input.value.length==0){
+				button.style.backgroundColor="red";
+			}else{
+				input.value="";
+				button.style.backgroundColor="green";
+				alert("提交成功")
+			}
+		}
+	</script>
+</body>
+</html>
